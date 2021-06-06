@@ -4,6 +4,9 @@ Animated Sliding Tab Bar for React Native
 
 This project uses Expo.
 
+## Demo
+![](demo.gif)
+
 ## Install
 
 Clone git repo

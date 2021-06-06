@@ -95,18 +95,35 @@ export default class App extends React.Component {
     };
     getBorderStyle(i){
         const {tabs} = this.state;
+        let style = {};
         if (i === 0){ // Left-most item
-            return {
-                borderTopLeftRadius: HEADER.BORDER_RADIUS,
-                borderBottomLeftRadius: HEADER.BORDER_RADIUS,
+             style = {
+                 ...style,
+                 ...{
+                     borderTopLeftRadius: HEADER.BORDER_RADIUS,
+                     borderBottomLeftRadius: HEADER.BORDER_RADIUS,
+                 },
+             }
+        }
+        else {
+            style = {
+                ...style,
+                ...{
+                    borderLeftWidth: 0,
+                },
             }
         }
         if (i === tabs.length - 1){ // Right-most item
-            return {
-                borderTopRightRadius: HEADER.BORDER_RADIUS,
-                borderBottomRightRadius: HEADER.BORDER_RADIUS,
+            style = {
+                ...style,
+                ...{
+                    borderTopRightRadius   : HEADER.BORDER_RADIUS,
+                    borderBottomRightRadius: HEADER.BORDER_RADIUS,
+                },
             }
         }
+
+        return style;
 
     }
 
