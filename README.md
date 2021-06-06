@@ -1,9 +1,11 @@
 # React Native Animated Tab Bar
 
 Animated Sliding Tab Bar for React Native
+
 This project supports 3+ tabs with an animated bar to switch between the tabs.
 
 This project uses Expo.
+
 Inspired by [Aditya Signh's original version](https://medium.com/weekly-webtips/animated-sliding-tabbar-in-react-native-f214d99f8799)
 
 ## Demo
