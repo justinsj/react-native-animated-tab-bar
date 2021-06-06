@@ -17,7 +17,7 @@ const MARGIN = {
 }
 const HEADER = {
     HEIGHT: 36,
-
+    BORDER_RADIUS: 4,
 }
 
 export default class App extends React.Component {
@@ -93,6 +93,22 @@ export default class App extends React.Component {
         // No need for setState or forceUpdate since we call Animated to
         // change the translateX value.
     };
+    getBorderStyle(i){
+        const {tabs} = this.state;
+        if (i === 0){ // Left-most item
+            return {
+                borderTopLeftRadius: HEADER.BORDER_RADIUS,
+                borderBottomLeftRadius: HEADER.BORDER_RADIUS,
+            }
+        }
+        if (i === tabs.length - 1){ // Right-most item
+            return {
+                borderTopRightRadius: HEADER.BORDER_RADIUS,
+                borderBottomRightRadius: HEADER.BORDER_RADIUS,
+            }
+        }
+
+    }
 
     render() {
         let {
@@ -123,12 +139,12 @@ export default class App extends React.Component {
                                 top: 0,
                                 left: 0,
                                 backgroundColor: "#007aff",
-                                borderRadius: 4,
                                 transform: [
                                     {
                                         translateX
                                     }
-                                ]
+                                ],
+                                ...(this.getBorderStyle(active)),
                             }}
                         />
                         {
@@ -153,7 +169,7 @@ export default class App extends React.Component {
                                             alignItems: "center",
                                             borderWidth: 1,
                                             borderColor: "#007aff",
-                                            borderRadius: 4,
+                                            ...(this.getBorderStyle(i)),
                                         }}
 
                                         onLayout={event =>{
