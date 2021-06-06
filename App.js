@@ -202,13 +202,13 @@ export default class App extends React.Component {
                                             })
                                         }
                                     >
-                                        <View
+                                        <Text
                                             style={{
                                                 color: active === i ? "#fff" : "#007aff"
                                             }}
                                         >
                                             {header}
-                                        </View>
+                                        </Text>
                                     </TouchableOpacity>
                                 )
                             })
