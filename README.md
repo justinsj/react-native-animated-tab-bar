@@ -15,7 +15,7 @@ Inspired by [Aditya Signh's original version](https://medium.com/weekly-webtips/
 
 Clone git repo
 ```
-git clone https://github.com/JSANJ/react-native-animated-tab-bar.git
+git clone https://github.com/justinsj/react-native-animated-tab-bar.git
 ```
 Go into the directory
 ```
