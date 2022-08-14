@@ -28,34 +28,31 @@ export default class App extends React.Component {
             translateX: new Animated.Value(0), // For the sliding button
             tabs: [
                 {
-                    header: <Text>Tab 0</Text>,
+                    header: <Text>React Native</Text>,
                     content: (
                         <React.Fragment>
-                            <Text>Tab 0</Text>
                             <View style={{ marginTop: MARGIN.marginTop }}>
-                                <Text>Tab 0 content</Text>
+                                <Text>This is a React Native component.</Text>
                             </View>
                         </React.Fragment>
                     ),
                 },
                 {
-                    header: <Text>Tab 1</Text>,
+                    header: <Text>Animated</Text>,
                     content: (
                         <React.Fragment>
-                            <Text>Tab 1</Text>
                             <View style={{ marginTop: MARGIN.marginTop }}>
-                                <Text>Tab 1 content</Text>
+                                <Text>With buttery-smooth animations.</Text>
                             </View>
                         </React.Fragment>
                     ),
                 },
                 {
-                    header: <Text>Tab 2</Text>,
+                    header: <Text>Tab Bar</Text>,
                     content: (
                         <React.Fragment>
-                            <Text>Tab 2</Text>
                             <View style={{ marginTop: 20 }}>
-                                <Text>Tab 2 content</Text>
+                                <Text>Supports multiple tabs!</Text>
                             </View>
                         </React.Fragment>
                     ),
